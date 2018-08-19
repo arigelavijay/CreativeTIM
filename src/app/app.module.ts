@@ -2,6 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 
@@ -31,6 +32,7 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 @NgModule({
   imports: [
@@ -41,6 +43,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
@@ -58,7 +61,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    UpgradeComponent
+    UpgradeComponent,
+    MainLayoutComponent
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]

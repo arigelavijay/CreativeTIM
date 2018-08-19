@@ -12,12 +12,38 @@ import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+
+import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes =[
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
+    component: MainLayoutComponent,
+    canActivate: [AuthGuard],
+    children: [
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },      
+      { path: 'user-profile',   component: UserProfileComponent },
+      { path: 'table-list',     component: TableListComponent },
+      { path: 'typography',     component: TypographyComponent },
+      { path: 'icons',          component: IconsComponent },
+      { path: 'maps',           component: MapsComponent },
+      { path: 'notifications',  component: NotificationsComponent },
+      { path: 'upgrade',        component: UpgradeComponent }
+    ]
   },
   // {
   //   path: '',
@@ -27,15 +53,10 @@ const routes: Routes =[
   //     path: '',
   //     loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
   // }]},
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
-    { path: '',               redirectTo: 'dashboard', pathMatch: 'full' }
+    // ,
+    // {
+    //   path: '**', redirectTo: ''
+    // }
 ];
 
 @NgModule({
