@@ -1,0 +1,20 @@
+.register {
+    text-align: center !important;
+    background-color: white;
+    border-color: #d8d4d4 !important;
+    margin-top: 3%;
+
+    p {
+        float: left;
+        font-weight: bold;
+    }
+
+    .mat-slide-toggle, .mat-radio-group{
+        float: left;
+        margin-bottom: 2%;
+    }
+    
+    .mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+        height: 2.5em !important;
+    }
+}

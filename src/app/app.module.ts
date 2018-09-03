@@ -5,9 +5,8 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-
 import { AppRoutingModule } from './app.routing';
-import { ComponentsModule } from './components/components.module';
+//import { ComponentsModule } from './components/components.module';
 
 import { AppComponent } from './app.component';
 
@@ -19,6 +18,9 @@ import { IconsComponent } from './icons/icons.component';
 import { MapsComponent } from './maps/maps.component';
 import { NotificationsComponent } from './notifications/notifications.component';
 import { UpgradeComponent } from './upgrade/upgrade.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+
 import { AuthGuard } from './guards/auth.guard';
 import { AuthService } from './services/auth.service';
 import {
@@ -26,6 +28,10 @@ import {
   MatInputModule,
   MatRippleModule,
   MatTooltipModule,
+  MatSelectModule,
+  MatSlideToggleModule,
+  MatRadioModule,
+  MatCheckboxModule
 } from '@angular/material';
 
 import {
@@ -33,6 +39,9 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -40,11 +49,15 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
     MatRippleModule,
     MatInputModule,
     MatTooltipModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatRadioModule,
+    MatCheckboxModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     HttpClientModule,
-    ComponentsModule,
+    //ComponentsModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
@@ -62,7 +75,12 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    MainLayoutComponent
+    MainLayoutComponent,
+    RegisterComponent,
+    LoginComponent,
+    FooterComponent,
+    NavbarComponent,
+    SidebarComponent,
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]

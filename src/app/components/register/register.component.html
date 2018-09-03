@@ -1,17 +1,53 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-4 mx-auto">
+            <div class="col-6 mx-auto">
                 <form class="text-center border border-light p-5 register">
-                    <p class="h4 mb-4">Register</p>
-                    <input type="text" id="defaultLoginFormName" class="form-control mb-4" placeholder="Name">
-                    <input type="text" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-                    <input type="text" id="defaultLoginFormPhone" class="form-control mb-4" placeholder="Phone">
-                    <input type="text" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-                    <button class="btn btn-info btn-block my-4" (click)="login();" type="button">Register</button>
+                    <p class="h4 mb-4">Contact Person Information</p>
+                    <mat-form-field>
+                        <input matInput placeholder="Name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="User Name/Email" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-select placeholder="Country">
+                            <mat-option value="1001">India</mat-option>
+                            <mat-option value="1002">Australia</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Mobile" />
+                    </mat-form-field>
+                    <p class="h4 mb-4">Organisation Information</p>
+                    <mat-form-field>
+                        <input matInput placeholder="Organisation Key" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-select placeholder="Institution Type">
+                            <mat-option value="1001">School</mat-option>
+                            <mat-option value="1002">Play School</mat-option>
+                            <mat-option value="1003">College</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <!-- <mat-radio-group>
+                        <mat-radio-button value="1">Trail for 7 days</mat-radio-button>
+                    </mat-radio-group> -->
+                    <mat-slide-toggle>Trail for 7 days</mat-slide-toggle>
+                    <mat-form-field>
+                        <input matInput placeholder="Organisation Name" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Password" />
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Confirm Password" />
+                    </mat-form-field>
+                    
+                    <button mat-flat-button class="btn btn-info btn-block my-4 primary" (click)="login();" type="button">Register</button>
                     <p>Already member?
                         <a routerLink="/login">Sign In</a>
-                    </p>                    
+                    </p>
                 </form>
             </div>
         </div>
