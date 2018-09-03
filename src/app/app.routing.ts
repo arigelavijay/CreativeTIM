@@ -17,6 +17,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { BasicDetailsComponent } from './components/basic-details/basic-details.component';
 
 const routes: Routes =[
   {
@@ -26,6 +27,10 @@ const routes: Routes =[
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'basic-details',
+    component: BasicDetailsComponent
   },
   {
     path: '',

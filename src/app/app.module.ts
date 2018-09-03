@@ -4,12 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
+import { FormWizardModule } from 'angular2-wizard';
 import { AppRoutingModule } from './app.routing';
-//import { ComponentsModule } from './components/components.module';
-
 import { AppComponent } from './app.component';
-
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { TableListComponent } from './table-list/table-list.component';
@@ -42,6 +39,7 @@ import { MainLayoutComponent } from './layouts/main-layout/main-layout.component
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BasicDetailsComponent } from './components/basic-details/basic-details.component';
 
 @NgModule({
   imports: [
@@ -57,12 +55,12 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FormsModule,
     HttpModule,
     HttpClientModule,
-    //ComponentsModule,
     RouterModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
-    })
+    }),
+    FormWizardModule
   ],
   declarations: [
     AppComponent,
@@ -81,6 +79,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
+    BasicDetailsComponent
   ],
   providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
