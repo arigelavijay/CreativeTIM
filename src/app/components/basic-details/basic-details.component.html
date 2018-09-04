@@ -3,32 +3,224 @@
     <form-wizard>
       <wizard-step [title]="'Basic Info'" [isValid]="emailForm.form.valid" (onNext)="onStep1Next($event)">
         <div class="wizard-content">
-          <h1>Step1</h1>
+          <!-- <h1>Step1</h1> -->
           <form #emailForm="ngForm">
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
                 [(ngModel)]="data.email" required>
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div> -->
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field [hideRequiredMarker]="false">
+                  <input matInput placeholder="School Name" required/>
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <input matInput placeholder="School Moto" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <input matInput placeholder="Software Starting Date" />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <input matInput placeholder="Affiliated By" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field>
+                  <input matInput placeholder="Registration No" />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <input matInput placeholder="Affiliation No" />
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field [hideRequiredMarker]="false">
+                  <input matInput placeholder="Date of Establishment" required/>
+                  <!-- <input matInput [matDatepicker]="picker" placeholder="Date of Establishment" required />
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker> -->
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field>
+                  <input matInput placeholder="Board" />
+                </mat-form-field>
+              </div>
             </div>
           </form>
         </div>
       </wizard-step>
       <wizard-step [title]="'Logo & Social'" (onNext)="onStep2Next($event)">
         <div class="wizard-content">
-          <h1>Step2</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Logo" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="School Image" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <mat-form-field>
+                <textarea matInput placeholder="About Us"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="You Tube Page Id" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Linkedin Page Id" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="G+ Page Id" />
+              </mat-form-field>
+            </div>
+          </div>
         </div>
       </wizard-step>
       <wizard-step [title]="'Contact Info'" (onNext)="onStep3Next($event)">
         <div class="wizard-content">
-          <h1>Step3</h1>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Country" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="State" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="District" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="City" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Address" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="PIN" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field [hideRequiredMarker]="false">
+                <input matInput placeholder="Email" required />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field [hideRequiredMarker]="false">
+                <input matInput placeholder="Mobile" required />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Alternate Mobile" />
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="Landline" />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <mat-form-field>
+                <input matInput placeholder="FAX" />
+              </mat-form-field>
+            </div>
+          </div>
         </div>
       </wizard-step>
       <wizard-step [title]="'Global Settings'" (onComplete)="onComplete($event)">
         <div class="wizard-content">
           <div [ngSwitch]="isCompleted">
             <div *ngSwitchDefault>
-              <h1>Step4</h1>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <input matInput placeholder="Date" />
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <input matInput placeholder="Time" />
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <input matInput placeholder="Currency Icon" />
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-radio-group>
+                    <div class="title">Print Computer Generated Copy</div>
+                    <mat-radio-button value="1">Enabled</mat-radio-button>&nbsp;&nbsp;
+                    <mat-radio-button value="0">Disabled</mat-radio-button>
+                  </mat-radio-group>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field>
+                    <input matInput placeholder="Time Zone" />
+                  </mat-form-field>
+                </div>
+              </div>
             </div>
             <div *ngSwitchCase="true">
               <h4>Thank you! You have completed all the steps.</h4>

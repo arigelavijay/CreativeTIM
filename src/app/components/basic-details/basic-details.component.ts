@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic-details.component.scss']
 })
 export class BasicDetailsComponent implements OnInit {
-
+  isCompleted: boolean = false;
   data: any = {};
   constructor() {
     this.data = {
@@ -30,7 +30,7 @@ export class BasicDetailsComponent implements OnInit {
   }
 
   onComplete(evt: any) {
-
+    this.isCompleted = true;
   }
 
 }

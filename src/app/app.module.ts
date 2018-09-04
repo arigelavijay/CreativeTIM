@@ -28,7 +28,8 @@ import {
   MatSelectModule,
   MatSlideToggleModule,
   MatRadioModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatDatepickerModule
 } from '@angular/material';
 
 import {
@@ -51,6 +52,7 @@ import { BasicDetailsComponent } from './components/basic-details/basic-details.
     MatSlideToggleModule,
     MatRadioModule,
     MatCheckboxModule,
+    MatDatepickerModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
