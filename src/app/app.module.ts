@@ -29,7 +29,9 @@ import {
   MatSlideToggleModule,
   MatRadioModule,
   MatCheckboxModule,
-  MatDatepickerModule
+  MatDatepickerModule,
+  MatNativeDateModule
+  
 } from '@angular/material';
 
 import {
@@ -53,6 +55,7 @@ import { BasicDetailsComponent } from './components/basic-details/basic-details.
     MatRadioModule,
     MatCheckboxModule,
     MatDatepickerModule,
+    MatNativeDateModule,
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
