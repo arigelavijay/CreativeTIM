@@ -44,6 +44,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BasicDetailsComponent } from './components/basic-details/basic-details.component';
 
+import { CountryService } from './services/country.service';
+import { StateService } from './services/state.service';
+
 @NgModule({
   imports: [
     MatButtonModule,
@@ -86,7 +89,12 @@ import { BasicDetailsComponent } from './components/basic-details/basic-details.
     SidebarComponent,
     BasicDetailsComponent
   ],
-  providers: [AuthGuard, AuthService],
+  providers: [
+    AuthGuard, 
+    AuthService,
+    CountryService,
+    StateService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

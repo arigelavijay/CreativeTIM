@@ -12,7 +12,7 @@
                     </mat-form-field>
                     <mat-form-field>
                         <mat-select placeholder="Country">
-                            <mat-option value="1001">India</mat-option>
+                            <mat-option *ngFor="let country of countryList" [value]="country.id">{{country.name}}</mat-option>
                             <mat-option value="1002">Australia</mat-option>
                         </mat-select>
                     </mat-form-field>
@@ -30,9 +30,6 @@
                             <mat-option value="1003">College</mat-option>
                         </mat-select>
                     </mat-form-field>
-                    <!-- <mat-radio-group>
-                        <mat-radio-button value="1">Trail for 7 days</mat-radio-button>
-                    </mat-radio-group> -->
                     <mat-slide-toggle>Trail for 7 days</mat-slide-toggle>
                     <mat-form-field>
                         <input matInput placeholder="Organisation Name" />

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CountryService } from '../../services/country.service';
+import { StateService } from '../../services/state.service';
+import * as Rx from 'rxjs';
 
 @Component({
   selector: 'app-basic-details',
@@ -8,10 +11,22 @@ import { Component, OnInit } from '@angular/core';
 export class BasicDetailsComponent implements OnInit {
   isCompleted: boolean = false;
   data: any = {};
-  constructor() {
+  dataSubs: any;
+  countryList: any;
+  stateList: any;
+  constructor(private countryService: CountryService, private stateService: StateService) {
     this.data = {
       email: '',
     };
+
+    let countryData = this.countryService.GetCountryList();
+    let stateData = this.stateService.GetStateList();
+
+    this.dataSubs = Rx.Observable.zip(countryData, stateData)
+      .subscribe(([_countryList, _stateList]) => {
+        this.countryList = _countryList;
+        this.stateList = _stateList;
+      });
   }
 
   ngOnInit() {

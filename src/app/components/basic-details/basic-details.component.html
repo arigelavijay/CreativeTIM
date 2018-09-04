@@ -5,12 +5,6 @@
         <div class="wizard-content">
           <!-- <h1>Step1</h1> -->
           <form #emailForm="ngForm">
-            <!-- <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"
-                [(ngModel)]="data.email" required>
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div> -->
             <div class="row">
               <div class="col-md-6">
                 <mat-form-field [hideRequiredMarker]="false">
@@ -120,12 +114,16 @@
           <div class="row">
             <div class="col-md-6">
               <mat-form-field>
-                <input matInput placeholder="Country" />
+                <mat-select placeholder="Country">
+                  <mat-option *ngFor="let country of countryList" [value]="country.id">{{country.name}}</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
             <div class="col-md-6">
               <mat-form-field>
-                <input matInput placeholder="State" />
+                <mat-select placeholder="State">
+                  <mat-option *ngFor="let state of stateList" [value]="state.id">{{state.name}}</mat-option>
+                </mat-select>
               </mat-form-field>
             </div>
           </div>
