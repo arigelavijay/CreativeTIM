@@ -4,3 +4,7 @@
 /* .mat-focused .mat-input-placeholder {
  color: blue;
 } */
+
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+    height: 2.5em !important;
+}

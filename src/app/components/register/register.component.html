@@ -24,9 +24,7 @@
                     </mat-form-field>
                     <mat-form-field>
                         <mat-select placeholder="Institution Type">
-                            <mat-option value="1001">School</mat-option>
-                            <mat-option value="1002">Play School</mat-option>
-                            <mat-option value="1003">College</mat-option>
+                            <mat-option *ngFor="let type of instituteTypeList" [value]="type.id">{{type.name}}</mat-option>                            
                         </mat-select>
                     </mat-form-field>
                     <mat-slide-toggle>Trail for 7 days</mat-slide-toggle>

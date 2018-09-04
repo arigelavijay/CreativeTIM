@@ -46,6 +46,7 @@ import { BasicDetailsComponent } from './components/basic-details/basic-details.
 
 import { CountryService } from './services/country.service';
 import { StateService } from './services/state.service';
+import { InstituteTypeService } from './services/institute.service';
 
 @NgModule({
   imports: [
@@ -93,7 +94,8 @@ import { StateService } from './services/state.service';
     AuthGuard, 
     AuthService,
     CountryService,
-    StateService
+    StateService,
+    InstituteTypeService
   ],
   bootstrap: [AppComponent]
 })
