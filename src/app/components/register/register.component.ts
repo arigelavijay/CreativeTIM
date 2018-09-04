@@ -19,9 +19,9 @@ export class RegisterComponent {
         let stateData = this.stateService.GetStateList();
 
         this.dataSubs = Rx.Observable.zip(countryData, stateData)
-            .subscribe(([_countryList, _stateList]) => {
-                this.countryList = _countryList;
-                this.stateList = _stateList;
-            });
+                        .subscribe(([_countryList, _stateList]) => {
+                            this.countryList = _countryList;
+                            this.stateList = _stateList;
+                        });
     }
 }
