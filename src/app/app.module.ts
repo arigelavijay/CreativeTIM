@@ -47,6 +47,8 @@ import { BasicDetailsComponent } from './components/basic-details/basic-details.
 import { CountryService } from './services/country.service';
 import { StateService } from './services/state.service';
 import { InstituteTypeService } from './services/institute.service';
+import { EmailValidator } from './directives/email.validator.directive';
+import { EqualValidator } from './directives/equal.validator.directive';
 
 @NgModule({
   imports: [
@@ -95,7 +97,9 @@ import { InstituteTypeService } from './services/institute.service';
     AuthService,
     CountryService,
     StateService,
-    InstituteTypeService
+    InstituteTypeService,
+    EmailValidator,
+    EqualValidator
   ],
   bootstrap: [AppComponent]
 })

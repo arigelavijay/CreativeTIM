@@ -8,3 +8,7 @@
 .mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
     height: 2.5em !important;
 }
+
+form .ng-valid.mat-focused .mat-form-field-label, form .ng-valid .mat-focused .mat-form-field-label, form .ng-valid .mat-form-field-label {
+    color: #4caf50 !important;
+}
