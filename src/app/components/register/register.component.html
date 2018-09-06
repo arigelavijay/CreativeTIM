@@ -34,10 +34,10 @@
                             <input matInput placeholder="Organisation Name" name="organisationName" ngModel required />
                         </mat-form-field>
                         <mat-form-field>
-                            <input matInput type="password" placeholder="Password" name="password" validateEqual="confirmPassword" reverse="true" #password="ngModel" ngModel required />
+                            <input matInput type="password" placeholder="Password" name="password" ngModel #password required />
                         </mat-form-field>
                         <mat-form-field>
-                            <input matInput type="password" placeholder="Confirm Password" name="confirmPassword" validateEqual="password" reverse="false" #confirmPassword="ngModel" ngModel required />
+                            <input matInput type="password" placeholder="Confirm Password" name="confirmPassword" ngModel #confirmPassword validateEqual="register.password" required />
                         </mat-form-field>
                         <button mat-flat-button class="btn btn-info btn-block my-4 primary" type="submit">Register</button>
                         <p>Already member?

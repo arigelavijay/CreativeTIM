@@ -90,16 +90,16 @@ import { EqualValidator } from './directives/equal.validator.directive';
     FooterComponent,
     NavbarComponent,
     SidebarComponent,
-    BasicDetailsComponent
+    BasicDetailsComponent,
+    EmailValidator,
+    EqualValidator
   ],
   providers: [
     AuthGuard, 
     AuthService,
     CountryService,
     StateService,
-    InstituteTypeService,
-    EmailValidator,
-    EqualValidator
+    InstituteTypeService
   ],
   bootstrap: [AppComponent]
 })
